@@ -1,0 +1,9 @@
+
+<input [(ngModel)]="name" placeholder="Search By Name">
+<input [(ngModel)]="page" placeholder="What page?">
+<input [(ngModel)]="itemsPerPage" placeholder="How many items per page?">
+<button (click)="showActors()">Get Actors</button>
+
+<div *ngIf="actors">
+    <p *ngFor="let actor of actors">{{actor}}</p>
+</div>

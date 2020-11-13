@@ -1,0 +1,21 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+<input [(ngModel)]="artist" placeholder="Artist">
+<input [(ngModel)]="year" placeholder="Year">
+
+<button (click)="showArtistStats()">Get Artist Statistics</button>
+<div *ngIf="stats">
+  <p *ngFor="let stat of stats">
+    <td>Score Statistics</td> <br>
+    <td>Mean/Average Score: {{stat.mean}}</td> <br>
+    <td>Median: {{stat.median}}</td> <br>
+    <td>Standard Deviation: {{stat.sd}}</td><br>
+</p>
+</div>
+<div [hidden]="!chart">
+  <canvas class="my-4 w-100" id="canvas" width="900" height="380">{{chart}}</canvas>
+</div>
+
+
+

@@ -1,0 +1,10 @@
+<input [(ngModel)]="page" placeholder="What page?">
+<input [(ngModel)]="itemsPerPage" placeholder="How many items per page?">
+<input [(ngModel)]="actor" placeholder="Actors in this Movie">
+<input [(ngModel)]="year" placeholder="Which year">
+
+<button (click)="showPopular()">Get Popular Movies</button>
+
+<div *ngIf="movies">
+    <p *ngFor="let movie of movies">{{movie.title}}</p>
+</div>

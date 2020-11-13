@@ -1,0 +1,11 @@
+
+<input [(ngModel)]="page" placeholder="What page?">
+<input [(ngModel)]="itemsPerPage" placeholder="How many items per page?">
+<input [(ngModel)]="director" placeholder="Director">
+<input [(ngModel)]="actor" placeholder="Actors">
+<input [(ngModel)]="year" placeholder="What year">
+<button (click)="showGenres()">Get Genres</button>
+
+<div *ngIf="genres">
+    <p *ngFor="let genre of genres">{{genre}}</p>
+</div>

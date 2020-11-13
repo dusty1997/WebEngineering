@@ -1,0 +1,13 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<div *ngIf="chartData">
+
+<canvas
+baseChart
+[chartType]="'bar'"
+[data]="chartData"
+[labels]="labels"
+[options]="chartOptions"
+[legend]="true">
+</canvas>
+
+</div>
